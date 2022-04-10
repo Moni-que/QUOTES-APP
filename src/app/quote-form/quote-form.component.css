@@ -7,8 +7,7 @@
     margin: 10px;
 }
 hr{
-    padding: 1px;
-    color: red;
+    color: maroon;
 }
 .details{
     display: flex;
@@ -18,12 +17,17 @@ hr{
 .details input{
     background-color: transparent;
     width: 30vw;
+    border-radius: 5px;
+    border: solid #ECE3A1 1px;
+    padding: 10px;
+
 }
 .details textarea{
     background-color: transparent;
     width: 60vw;
     border: solid #ECE3A1 1px;
     border-radius: 5px;
+    padding: 20px 30px;
 }
 ::placeholder{
     color: white;
@@ -33,6 +37,7 @@ p{
     color: black;
     width: 50vw;
     padding: 8px;
+    border-radius: 5px;
 
 }
 .question{
