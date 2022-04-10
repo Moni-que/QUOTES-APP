@@ -20,6 +20,7 @@ hr{
     border-radius: 5px;
     border: solid #ECE3A1 1px;
     padding: 10px;
+    color: white;
 
 }
 .details textarea{
@@ -29,6 +30,7 @@ hr{
     border: solid #ECE3A1 1px;
     border-radius: 5px;
     padding: 20px 30px;
+    color: white;
 }
 ::placeholder{
     color: white;
