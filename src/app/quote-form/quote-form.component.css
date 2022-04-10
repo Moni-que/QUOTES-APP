@@ -1,0 +1,43 @@
+.button-2 button{
+    padding: 10px 40px;
+    font-size: 20px;
+    font-weight: 450;
+    border-radius: 10%;
+    background-color: yellow;
+    margin: 10px;
+}
+hr{
+    padding: 1px;
+    color: red;
+}
+.details{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.details input{
+    background-color: transparent;
+    width: 30vw;
+}
+.details textarea{
+    background-color: transparent;
+    width: 60vw;
+    border: solid #ECE3A1 1px;
+    border-radius: 5px;
+}
+::placeholder{
+    color: white;
+}
+p{
+    background-color: azure;
+    color: black;
+    width: 50vw;
+    padding: 8px;
+
+}
+.question{
+    margin-top: 100px;
+}
+.myform{
+    margin-top: 30px;
+}
