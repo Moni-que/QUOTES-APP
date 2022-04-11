@@ -2,9 +2,15 @@
     <div class="row myheading">
         <h1>QUOTES-APP</h1>
       </div>
-      <ol class="pt-3 p-5" *ngFor = 'let quote of quotes'>
+      <ul class="pt-3 p-5" *ngFor = 'let quote of quotes'>
+        <div *ngIf = 'quote.POINTS == 100; then rule else leaveit'></div>
+          <ng-template #rule>
             <li appHighest class=" mylist d-flex justify-content-center"> <span class=" m-3 col">{{quote.QUOTES}} </span><span class="quoty m-3 col">UPVOTES: {{quote.UPVOTES}}</span> <span class="quoty m-3 col">DOWNVOTES: {{quote.DOWNVOTES}}</span> <span class="quoty m-3 col ">POINTS: {{quote.POINTS}}</span></li>
-      </ol>
+          </ng-template>
+          <ng-template #leaveit>
+            <li appHighest class=" mylist d-flex justify-content-center"> <span class=" m-3 col">{{quote.QUOTES}} </span><span class="quoty m-3 col">UPVOTES: {{quote.UPVOTES}}</span> <span class="quoty m-3 col">DOWNVOTES: {{quote.DOWNVOTES}}</span> <span class="quoty m-3 col ">POINTS: {{quote.POINTS}}</span></li>
+          </ng-template>
+      </ul>
     <!-- <ol>
         <div class="row mt-4">
             <div class="col">

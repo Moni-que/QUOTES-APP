@@ -6,7 +6,7 @@ import { Directive, ElementRef } from '@angular/core';
 export class HighestDirective {
 
   constructor(private elem:ElementRef) { 
-    elem.nativeElement.style.backgroundColor = 'blue';
+    elem.nativeElement.style.backgroundColor = 'maroon';
    }
 
 }
