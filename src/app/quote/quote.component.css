@@ -35,3 +35,7 @@ hr{
     font-size: 20px;
     font-weight: 500;
 }
+button{
+    border-radius: 5px;
+    border: solid maroon 3px;
+}
