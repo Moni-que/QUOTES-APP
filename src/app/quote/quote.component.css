@@ -1,3 +1,16 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.myheading h1{
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+.myheading{
+    background-color: azure;
+    color: black;
+}
 .button-1 button{
     padding: 10px 40px;
     font-size: 20px;
@@ -7,4 +20,18 @@
 }
 hr{
     color: maroon;
+}
+.general-2{
+    background-color: black;
+    color: white;
+}
+.mylist{
+    list-style: none;
+}
+.quoty{
+    background-color: yellow;
+    color: black;
+    height: 10vh;
+    font-size: 20px;
+    font-weight: 500;
 }
