@@ -5,13 +5,13 @@
     </div>
     <form action="" class="myform">
         <div class="row details">
-            <input type="text" placeholder="What's your full name?">
-            <textarea name="" id="myquote" placeholder="Type your quote here..."></textarea>
+            <input name="inputs" ngModel  #inputs="ngModel" (change)="log(inputs)" class="form-control" type="text" placeholder="What's your full name?">
+            <textarea id="mytextarea" class="form-control" id="myquote" placeholder="Type your quote here..."></textarea>
         </div>
         <hr>
         <div class="button-2">
-            <button>SUBMIT</button>
-            <button>DELETE</button>
+            <button>ADD QUOTE</button>
+            <button>DELETE QUOTE</button>
         </div>
     </form>
     <footer class="row myfooter d-flex justify-content-center">

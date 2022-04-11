@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quote-form.component.css']
 })
 export class QuoteFormComponent implements OnInit {
-
+  log(yes:any) {console.log(yes);}
   constructor() { }
 
   ngOnInit(): void {
