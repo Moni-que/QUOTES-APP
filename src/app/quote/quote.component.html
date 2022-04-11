@@ -3,7 +3,7 @@
         <h1>QUOTES-APP</h1>
       </div>
       <ol class="pt-3 p-5" *ngFor = 'let quote of quotes'>
-            <li class=" mylist d-flex justify-content-center"> <span class=" m-3 col">{{quote.QUOTES}} </span><span class="quoty m-3 col">UPVOTES: {{quote.UPVOTES}}</span> <span class="quoty m-3 col">DOWNVOTES: {{quote.DOWNVOTES}}</span> <span class="quoty m-3 col ">POINTS: {{quote.POINTS}}</span></li>
+            <li appHighest class=" mylist d-flex justify-content-center"> <span class=" m-3 col">{{quote.QUOTES}} </span><span class="quoty m-3 col">UPVOTES: {{quote.UPVOTES}}</span> <span class="quoty m-3 col">DOWNVOTES: {{quote.DOWNVOTES}}</span> <span class="quoty m-3 col ">POINTS: {{quote.POINTS}}</span></li>
       </ol>
     <!-- <ol>
         <div class="row mt-4">

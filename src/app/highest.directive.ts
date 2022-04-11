@@ -5,8 +5,8 @@ import { Directive, ElementRef } from '@angular/core';
 })
 export class HighestDirective {
 
-  constructor() { 
-    // this.elem.nativeElement.style.textDecoration='highlight';
+  constructor(private elem:ElementRef) { 
+    elem.nativeElement.style.backgroundColor = 'blue';
    }
 
 }
