@@ -15,6 +15,11 @@ export class QuoteComponent implements OnInit {
     new Quote('You do not start out writing good stuff. You start out writing crap and thinking it is good stuff, and then gradually you get better at it.', 30, 0,'Octavia E. Butler', 30),
     new Quote('Start before you are ready.', 20, 0,'Steven Pressfield', 20)
   ];
+  addNewQuote(Quote: any){
+    let QuoteLength = this.quotes.length;
+    Quote.POINTS = QuoteLength+1;
+    this.quotes.push(Quote)
+  }
   myarr: number[]=this.quotes.map(quote=>quote.POINTS)
   highest= Math.max(...this.myarr)
   constructor() { }

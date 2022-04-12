@@ -5,118 +5,13 @@
     <ul class="pt-3 p-5" *ngFor = 'let quote of quotes'>
         <div appHighest *ngIf = 'quote.POINTS == highest; then rule else leaveit'></div>
         <ng-template #rule>
-            <li appHighest class=" mylist d-flex justify-content-center"> <span class=" m-3 col">{{quote.QUOTES}} </span><button class="quoty m-3 col">UPVOTE: {{quote.UPVOTES}}</button> <button class="quoty m-3 col">DOWNVOTE: {{quote.DOWNVOTES}}</button> <span class="quoty m-3 col ">POINTS: {{quote.POINTS}}</span></li>
+            <li appHighest class=" mylist d-flex justify-content-center"> <span class=" m-3 col">{{quote.QUOTES}} <span class="quoty m-3 col" >AUTHOR: <br> {{quote.AUTHOR}}</span> </span><button type="submit" class="quoty m-3 col">UPVOTE: {{quote.UPVOTES}}</button> <button type="submit" class="quoty m-3 col">DOWNVOTE: {{quote.DOWNVOTES}}</button> <span class="quoty m-3 col ">POINTS: {{quote.POINTS}}</span></li>
         </ng-template>
         <ng-template #leaveit>
-            <li class=" mylist d-flex justify-content-center"> <span class=" m-3 col">{{quote.QUOTES}} </span><button class="quoty m-3 col">UPVOTE: {{quote.UPVOTES}}</button> <button class="quoty m-3 col">DOWNVOTE: {{quote.DOWNVOTES}}</button> <span class="quoty m-3 col ">POINTS: {{quote.POINTS}}</span></li>
+            <li class=" mylist d-flex justify-content-center"> <span class=" m-3 col">{{quote.QUOTES}} </span> <span class="quoty m-3 col" >AUTHOR: <br> {{quote.AUTHOR}}</span><button type="submit" class="quoty m-3 col">UPVOTE: {{quote.UPVOTES}}</button> <button type="submit" class="quoty m-3 col">DOWNVOTE: {{quote.DOWNVOTES}}</button> <span class="quoty m-3 col ">POINTS: {{quote.POINTS}}</span></li>
         </ng-template>
     </ul>
-    <!-- <ol>
-        <div class="row mt-4">
-            <div class="col">
-                <h4>QUOTES</h4>
-            </div>
-            <div class="col">
-                <h4>AUTHOR</h4>
-            </div>
-            <div class="col">
-                <h4>UPVOTE</h4>
-            </div>
-            <div class="col">
-                <h4>DOWNVOTE</h4>
-            </div>
-            <div class="col">
-                <h4>POINTS</h4>
-            </div>
-        </div>
-        <hr>
-        <div class="row mt-3">
-            <div class="col">
-                <li>Start writing, no matter what. The water does not flow until the faucet is turned on.</li>
-            </div>
-            <div class="col">
-                Louis L’Amour
-            </div>
-            <div class="col button-1">
-                <button>UP</button>
-            </div>
-            <div class="col button-1">
-                <button>DOWN</button>
-            </div>
-            <div class="col">
-                50
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col">
-                <li>Get it down. Take chances. It may be bad, but it's the only way you can do anything really good.</li>
-            </div>
-            <div class="col">
-                William Faulkner
-            </div>
-            <div class="col button-1">
-                <button>UP</button>
-            </div>
-            <div class="col button-1">
-                <button>DOWN</button>
-            </div>
-            <div class="col">
-                40
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col">
-                <li>The first draft is just you telling yourself the story.</li>
-            </div>
-            <div class="col">
-                Terry Pratchett
-            </div>
-            <div class="col button-1">
-                <button>UP</button>
-            </div>
-            <div class="col button-1">
-                <button>DOWN</button>
-            </div>
-            <div class="col">
-                30
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col">
-                <li>You don’t start out writing good stuff. You start out writing crap and thinking it’s good stuff, and then gradually you get better at it.</li>
-            </div>
-            <div class="col">
-                Octavia E. Butler
-            </div>
-            <div class="col button-1">
-                <button>UP</button>
-            </div>
-            <div class="col button-1">
-                <button>DOWN</button>
-            </div>
-            <div class="col">
-                20
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col">
-                <li>Start before you’re ready.</li>
-            </div>
-            <div class="col">
-                Steven Pressfield
-            </div>
-            <div class="col button-1">
-                <button>UP</button>
-            </div>
-            <div class="col button-1">
-                <button>DOWN</button>
-            </div>
-            <div class="col">
-                10
-            </div>
-        </div>
-    </ol> -->
-    <app-quote-form></app-quote-form> 
+    <app-quote-form (addQuote)="($event)"></app-quote-form> 
 </div>   
 
 
