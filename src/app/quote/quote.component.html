@@ -3,12 +3,12 @@
         <h1>QUOTES-APP</h1>
     </div>
     <ul class="pt-3 p-5" *ngFor = 'let quote of quotes'>
-        <div appHighest *ngIf = 'quote.POINTS == highest; then rule else leaveit'></div>
+        <div appHighest *ngIf = 'quote.UPVOTES == highest; then rule else leaveit'></div>
         <ng-template #rule>
-            <li appHighest class=" mylist d-flex justify-content-center"> <span class=" m-3 col">{{quote.QUOTES}} <span class="quoty m-3 col" >AUTHOR: <br> {{quote.AUTHOR}}</span> </span><button type="submit" class="quoty m-3 col">UPVOTE: {{quote.UPVOTES}}</button> <button type="submit" class="quoty m-3 col">DOWNVOTE: {{quote.DOWNVOTES}}</button> <span class="quoty m-3 col ">POINTS: {{quote.POINTS}}</span></li>
+            <li appHighest class=" mylist d-flex justify-content-center"> <span class=" m-3 col">{{quote.QUOTES}} <span class="quoty m-3 col" >AUTHOR: <br> {{quote.AUTHOR}}</span> </span><button type="submit" class="quoty m-3 col">UPVOTE: {{quote.UPVOTES}}</button> <button type="submit" class="quoty m-3 col">DOWNVOTE: {{quote.DOWNVOTES}}</button></li>
         </ng-template>
         <ng-template #leaveit>
-            <li class=" mylist d-flex justify-content-center"> <span class=" m-3 col">{{quote.QUOTES}} </span> <span class="quoty m-3 col" >AUTHOR: <br> {{quote.AUTHOR}}</span><button type="submit" class="quoty m-3 col">UPVOTE: {{quote.UPVOTES}}</button> <button type="submit" class="quoty m-3 col">DOWNVOTE: {{quote.DOWNVOTES}}</button> <span class="quoty m-3 col ">POINTS: {{quote.POINTS}}</span></li>
+            <li class=" mylist d-flex justify-content-center"> <span class=" m-3 col">{{quote.QUOTES}} </span> <span class="quoty m-3 col" >AUTHOR: <br> {{quote.AUTHOR}}</span><button type="submit" class="quoty m-3 col">UPVOTE: {{quote.UPVOTES}}</button> <button type="submit" class="quoty m-3 col">DOWNVOTE: {{quote.DOWNVOTES}}</button></li>
         </ng-template>
     </ul>
     <app-quote-form (addQuote)="($event)"></app-quote-form> 
