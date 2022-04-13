@@ -8,6 +8,7 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { HighestDirective } from './highest.directive';
 import { FormsModule } from '@angular/forms';
 import { DeleteButtonComponent } from './delete-button/delete-button.component';
+import { DateCountPipe } from './date.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DeleteButtonComponent } from './delete-button/delete-button.component';
     QuoteComponent,
     QuoteFormComponent,
     HighestDirective,
-    DeleteButtonComponent
+    DeleteButtonComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,

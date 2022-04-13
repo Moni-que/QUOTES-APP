@@ -12,12 +12,12 @@ export class QuoteFormComponent implements OnInit {
   //   this.quotes[index].downVotes < 0) this.quotes[index].downvotes = 0;
   // }
 
-  newQuote = new Quote("",0,0,"");
+  newQuote = new Quote("",0,0,"",new Date());
   @Output()addQuote = new EventEmitter<Quote>();
 
   submitQuote(){
     this.addQuote.emit(this.newQuote)
-    this.newQuote=new Quote("",0,0,"");
+    this.newQuote=new Quote("",0,0,"",new Date());
   }
   // deleteQote(complete: boolean){
   //   this.isComplete.emit(complete)
