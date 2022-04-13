@@ -2,14 +2,17 @@
     <div class="row myheading">
         <h1>QUOTES-APP</h1>
     </div>
-    <ul class="pt-3 p-5" *ngFor = 'let quote of quotes'>
+    <ul class="pt-3 p-5 card bg-dark" *ngFor = 'let quote of quotes let i = index'>
         <div appHighest *ngIf = 'quote.UPVOTES == highest; then rule else leaveit'></div>
         <ng-template #rule>
-            <li appHighest class=" mylist d-flex justify-content-center"> <span class=" m-3 col">{{quote.QUOTES}} <span class="quoty m-3 col" >AUTHOR: <br> {{quote.AUTHOR}}</span> </span><button type="submit" class="quoty m-3 col">UPVOTE: {{quote.UPVOTES}}</button> <button type="submit" class="quoty m-3 col">DOWNVOTE: {{quote.DOWNVOTES}}</button></li>
+            <li appHighest class=" card-body mylist d-flex justify-content-center"> <span class=" m-1 col">{{quote.QUOTES}}</span> <span class="quoty m-1 col" >AUTHOR: <br> {{quote.AUTHOR}}</span><button (click)="UPVOTE(i)" type="submit" class="btn btn-outline-dark btn-sm m-5 p-2">UPVOTE: {{quote.UPVOTES}}</button> <button (click)="DOWNVOTE(i)" type="submit" class="btn btn-outline-dark btn-sm m-5 p-2">DOWNVOTE: {{quote.DOWNVOTES}}</button></li>
+            
         </ng-template>
         <ng-template #leaveit>
-            <li class=" mylist d-flex justify-content-center"> <span class=" m-3 col">{{quote.QUOTES}} </span> <span class="quoty m-3 col" >AUTHOR: <br> {{quote.AUTHOR}}</span><button type="submit" class="quoty m-3 col">UPVOTE: {{quote.UPVOTES}}</button> <button type="submit" class="quoty m-3 col">DOWNVOTE: {{quote.DOWNVOTES}}</button></li>
+            <li appHighest class=" mylist d-flex justify-content-center"> <span class=" m-1 col">{{quote.QUOTES}} </span> <span class="quoty m-1 col" >AUTHOR: <br> {{quote.AUTHOR}}</span><button (click)="UPVOTE(i)" type="submit" class="btn btn-outline-dark btn-sm m-5 p-2">UPVOTE: {{quote.UPVOTES}}</button> <button (click)="DOWNVOTE(i)" type="submit" class="btn btn-outline-dark btn-sm m-5 p-2">DOWNVOTE: {{quote.DOWNVOTES}}</button></li>
         </ng-template>
+        <app-delete-button (isComplete) = "deleteQuote($event, i)" ></app-delete-button>
+        <!-- <button (click) = (isComplete) = "deleteQuote(true)" class="btn btn-light p-2 m-2 text-dark w-25" >DELETE</button> -->
     </ul>
     <app-quote-form (addQuote)="($event)"></app-quote-form> 
 </div>   

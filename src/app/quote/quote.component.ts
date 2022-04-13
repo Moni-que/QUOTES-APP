@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Quote } from '../quote';
 
 @Component({
@@ -9,15 +9,43 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[]=[
-    new Quote('Start writing, no matter what. The water does not flow until the faucet is turned on.', 100, 0,'Louis LAmour'),
-    new Quote('Get it down. Take chances. It may be bad, but it is the only way you can do anything really good.', 60, 0,'William Faulkner'),
-    new Quote('The first draft is just you telling yourself the story.', 50, 0,'Terry Pratchett'),
-    new Quote('You do not start out writing good stuff. You start out writing crap and thinking it is good stuff, and then gradually you get better at it.', 30, 0,'Octavia E. Butler'),
-    new Quote('Start before you are ready.', 20, 0,'Steven Pressfield')
+    new Quote('Start writing, no matter what. The water does not flow until the faucet is turned on.', 0, 0,'Louis LAmour'),
+    new Quote('Get it down. Take chances. It may be bad, but it is the only way you can do anything really good.', 0, 0,'William Faulkner'),
+    new Quote('The first draft is just you telling yourself the story.', 0, 0,'Terry Pratchett'),
+    new Quote('You do not start out writing good stuff. You start out writing crap and thinking it is good stuff, and then gradually you get better at it.', 0, 0,'Octavia E. Butler'),
+    new Quote('Start before you are ready.', 0, 0,'Steven Pressfield')
   ];
   myarr: number[]=this.quotes.map(quote=>quote.UPVOTES)
   highest= Math.max(...this.myarr)
+  isComplete: any;
+
+  @Input()
+  quote!: Quote;
+
+  @Output() isRead = new EventEmitter<boolean>();
+
+  UPVOTE(i: number){
+    this.quotes[i].UPVOTES +=1;
+  }
+  DOWNVOTE(i: number){
+    this.quotes[i].DOWNVOTES +=1;
+  }
+  // deleteQuote(complete: boolean){
+  //   this.isComplete.emit(complete)
+  // }
+ 
+  deleteQuote(isComplete: any, index: number) {
+    if (isComplete) {
+      let toDelete = confirm(
+        `Are you sure you want to delete ${this.quotes[index].QUOTES}?`
+      );
+      if (toDelete) {
+        this.quotes.splice(index, 1);
+      }
+    }
+  }
   constructor() { }
+
 
   ngOnInit(): void {
   }

@@ -8,12 +8,19 @@ import { Quote } from '../quote';
 })
 export class QuoteFormComponent implements OnInit {
 
+  // downVote(index:number){
+  //   this.quotes[index].downVotes < 0) this.quotes[index].downvotes = 0;
+  // }
+
   newQuote = new Quote("",0,0,"");
   @Output()addQuote = new EventEmitter<Quote>();
 
   submitQuote(){
     this.addQuote.emit(this.newQuote)
   }
+  // deleteQote(complete: boolean){
+  //   this.isComplete.emit(complete)
+  // }
   constructor() { }
 
   ngOnInit(): void {
