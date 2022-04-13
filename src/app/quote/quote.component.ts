@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+
 import { Quote } from '../quote';
 
 @Component({
@@ -15,6 +16,7 @@ export class QuoteComponent implements OnInit {
     new Quote('You do not start out writing good stuff. You start out writing crap and thinking it is good stuff, and then gradually you get better at it.', 0, 0,'Octavia E. Butler'),
     new Quote('Start before you are ready.', 0, 0,'Steven Pressfield')
   ];
+
   myarr: number[]=this.quotes.map(quote=>quote.UPVOTES)
   highest= Math.max(...this.myarr)
   isComplete: any;
@@ -33,6 +35,11 @@ export class QuoteComponent implements OnInit {
   // deleteQuote(complete: boolean){
   //   this.isComplete.emit(complete)
   // }
+  goals: any;
+  addNewQuote(quote:any){
+    let quoteLength=this.quotes.length;
+    this.quotes.push(this.quote)
+  }
  
   deleteQuote(isComplete: any, index: number) {
     if (isComplete) {
@@ -51,3 +58,4 @@ export class QuoteComponent implements OnInit {
   }
 
 }
+

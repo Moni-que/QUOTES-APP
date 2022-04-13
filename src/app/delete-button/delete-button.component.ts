@@ -12,8 +12,8 @@ export class DeleteButtonComponent implements OnInit {
 
   @Output() isComplete = new EventEmitter<boolean>();
 
-  deleteQuote(read: boolean) {
-    this.isComplete.emit(read);
+  deleteQuote(complete: boolean) {
+    this.isComplete.emit(complete);
   }
 
   constructor() { }
@@ -22,3 +22,5 @@ export class DeleteButtonComponent implements OnInit {
   }
 
 }
+
+

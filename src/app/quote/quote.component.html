@@ -11,7 +11,7 @@
         <ng-template #leaveit>
             <li appHighest class=" mylist d-flex justify-content-center"> <span class=" m-1 col">{{quote.QUOTES}} </span> <span class="quoty m-1 col" >AUTHOR: <br> {{quote.AUTHOR}}</span><button (click)="UPVOTE(i)" type="submit" class="btn btn-outline-dark btn-sm m-5 p-2">UPVOTE: {{quote.UPVOTES}}</button> <button (click)="DOWNVOTE(i)" type="submit" class="btn btn-outline-dark btn-sm m-5 p-2">DOWNVOTE: {{quote.DOWNVOTES}}</button></li>
         </ng-template>
-        <app-delete-button (isComplete) = "deleteQuote($event, i)" ></app-delete-button>
+        <app-delete-button (isComplete) = "deleteQuote($event,i)" ></app-delete-button>
         <!-- <button (click) = (isComplete) = "deleteQuote(true)" class="btn btn-light p-2 m-2 text-dark w-25" >DELETE</button> -->
     </ul>
     <app-quote-form (addQuote)="($event)"></app-quote-form> 
