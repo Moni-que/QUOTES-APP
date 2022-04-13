@@ -32,9 +32,6 @@ export class QuoteComponent implements OnInit {
   DOWNVOTE(i: number){
     this.quotes[i].DOWNVOTES +=1;
   }
-  // deleteQuote(complete: boolean){
-  //   this.isComplete.emit(complete)
-  // }
   goals: any;
   addNewQuote(quote:any){
     let quoteLength=this.quotes.length;

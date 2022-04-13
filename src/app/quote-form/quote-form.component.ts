@@ -8,10 +8,6 @@ import { Quote } from '../quote';
 })
 export class QuoteFormComponent implements OnInit {
 
-  // downVote(index:number){
-  //   this.quotes[index].downVotes < 0) this.quotes[index].downvotes = 0;
-  // }
-
   newQuote = new Quote("",0,0,"",new Date());
   @Output()addQuote = new EventEmitter<Quote>();
 
@@ -19,9 +15,6 @@ export class QuoteFormComponent implements OnInit {
     this.addQuote.emit(this.newQuote)
     this.newQuote=new Quote("",0,0,"",new Date());
   }
-  // deleteQote(complete: boolean){
-  //   this.isComplete.emit(complete)
-  // }
   constructor() { }
 
   ngOnInit(): void {

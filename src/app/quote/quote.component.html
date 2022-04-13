@@ -13,7 +13,6 @@
         </ng-template>
         <p class="text-light">Posted on {{quote.completeDate|date|uppercase}}</p>
         <app-delete-button (isComplete) = "deleteQuote($event,i)" ></app-delete-button>
-        <!-- <button (click) = (isComplete) = "deleteQuote(true)" class="btn btn-light p-2 m-2 text-dark w-25" >DELETE</button> -->
     </ul>
     <app-quote-form (addQuote)="($event)"></app-quote-form> 
 </div>   
