@@ -1,7 +1,12 @@
 # QUOTESAPP
 
 #### By Monicah Maina
-This is an app where users can view quotes and vote on whether they like or dislike them.They can also add and delete quotes.
+
+### Screeshot of the Application
+
+![Screenshot from 2022-05-09 06-04-18](https://user-images.githubusercontent.com/93192319/167333800-183c1d16-a291-4283-8278-915597c131af.png)
+![Screenshot from 2022-05-09 06-06-00](https://user-images.githubusercontent.com/93192319/167333817-963dbc71-4d58-4832-80b5-b651e274e3d2.png)
+
 
 ## Table Of Content
 * Description 
@@ -13,7 +18,7 @@ This is an app where users can view quotes and vote on whether they like or disl
 
 ## Description
 
-This is an application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational.
+This is an application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational.They can also add and delete quotes.
 
 ## Installation
 
